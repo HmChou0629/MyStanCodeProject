@@ -1,0 +1,41 @@
+"""
+File: quadratic_solver.py
+Name:
+-----------------------
+This program should implement a console program
+that asks 3 inputs (a, b, and c)
+from users to compute the roots of equation:
+ax^2 + bx + c = 0
+Output format should match what is shown in the sample
+run in the Assignment 2 Handout.
+
+"""
+
+import math
+
+
+def main():
+	"""
+	TODO:
+	"""
+	print("二元一次方成ax²+bx+c=0")
+	print("請輸入a,b,c的值")
+	a = int(input("Enter a= "))
+	b = int(input("Enter b= "))
+	c = int(input("Enter c= "))
+	discriminant = b * b - 4 * a * c
+	if discriminant > 0:
+		x1 = (-b + math.sqrt(discriminant)) / (2 * a)
+		x2 = (-b - math.sqrt(discriminant)) / (2 * a)
+		print("Two roots: " + str(x1) + "," + str(x2))
+	elif discriminant < 0:
+		print("No real roots")
+	else:
+		x1 = (-b + math.sqrt(discriminant)) / (2 * a)
+		print("One root: " + str(x1))
+
+
+# DO NOT EDIT CODE BELOW THIS LINE #
+
+if __name__ == "__main__":
+	main()
